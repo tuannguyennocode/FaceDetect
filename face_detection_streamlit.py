@@ -21,6 +21,8 @@ frameST = st.empty()
 # loop over the frames from the video stream
 while True:
     ret, frame = cap.read()
+    if frame is None:
+        break
     orig = frame.copy()
 
     # detect faces in the grayscale frame
